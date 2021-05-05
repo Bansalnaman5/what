@@ -24,10 +24,10 @@ class MainActivity : AppCompatActivity() {
         if(intent.action== Intent.ACTION_PROCESS_TEXT){
             number=intent.getCharSequenceExtra(Intent.EXTRA_PROCESS_TEXT).toString()
         }
-//        if(number.isDigitsOnly()){
+        if(number!="0"){
         num.text=number
             startwhatsapp(number)
-//        }
+        }
 //        else{
 //            num.text=number;
 //            Toast.makeText(this,"Enter only number",Toast.LENGTH_SHORT).show()
